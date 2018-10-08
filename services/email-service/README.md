@@ -10,13 +10,13 @@
 ## Serverless framework
 - Provides a nice cloud formation abstraction
 - Has built in templates to get started easily
-> serverless create --template aws-nodejs --path email-service
+``` serverless create --template aws-nodejs --path email-service ```
 - Infrastructure as code for serverless services
 - Contained in serverless.yml file
 - To run locally
-> serverless invoke local --function send
+``` serverless invoke local --function send ```
 - To deploy
-> sls deploy
+``` sls deploy ```
 - State of cloud formation is saved in s3.  Serverless framework auto creates s3 bucket and stored cloud formation state files.
 - Deletion of resources in serverless.yml file does remove it from AWS
 - Able to specify API-gateway key by adding "apiKeys" element and providing name of key to show in gui
@@ -30,14 +30,16 @@
 - Create IAM user for deploying app
 - Install node.js
 - Ensure using latest npm by checking PATH variables (may need to move npm install above nodejs reference since nodejs also has npm version)
-> npm -v
+``` npm -v ```
 - use npm to install serverless framework
-> npm install -g serverless
+``` npm install -g serverless ```
 - Install python: https://realpython.com/installing-python/
 - Ensure python in PATH variables
 - Install pip: https://pip.pypa.io/en/stable/installing/ or https://www.makeuseof.com/tag/install-pip-for-python/
+    - saved get-py script locally: https://bootstrap.pypa.io/get-pip.py
+    - ``` python get-pip.py ``` 
 - Ensure pip in PATH variables
 - Use pip to install aws cli
-> pip install awscli
+``` pip install awscli ```
 - Setup aws cli with IAM credentials
 
