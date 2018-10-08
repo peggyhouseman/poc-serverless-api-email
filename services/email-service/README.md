@@ -29,14 +29,15 @@
 - Have AWS account
 - Create IAM user for deploying app
 - Install node.js
-- Ensure using latest npm by checking PATH variables (may need to move npm install above nodejs reference)
+- Ensure using latest npm by checking PATH variables (may need to move npm install above nodejs reference since nodejs also has npm version)
 > npm -v
 - use npm to install serverless framework
 > npm install -g serverless
-- Install python
+- Install python: https://realpython.com/installing-python/
 - Ensure python in PATH variables
-- Install pip
+- Install pip: https://pip.pypa.io/en/stable/installing/ or https://www.makeuseof.com/tag/install-pip-for-python/
 - Ensure pip in PATH variables
 - Use pip to install aws cli
+> pip install awscli
 - Setup aws cli with IAM credentials
 
