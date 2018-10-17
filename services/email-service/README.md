@@ -25,7 +25,6 @@
 - To call Api-Gateway endpoints secured by keys, the key must be provided as the value in the "x-api-key" header
 
 ## Setup
-
 - Have AWS account
 - Create IAM user for deploying app
 - Install node.js
@@ -42,4 +41,26 @@
 - Use pip to install aws cli
     - ``` pip install awscli ```
 - Setup aws cli with IAM credentials
+
+## VSCode Debug
+- Ensure serverless is installed via npm
+    - ```npm install serverless```
+    - adds a node_modules folder
+    - will reference node_modules folder in launch.json
+- Click Debug side menu (crossed out bug icon)
+- Click the gear icon on the top menu to create a new launch.json file
+- Modify the launch.json program to point to node_modules serverless file
+    - ```"program": "${workspaceFolder}\\node_modules\\serverless\\bin\\serverless"```
+- Add args to the launch.json file and pass the serverless local execution command
+    - ```
+        "args": [
+                "invoke",
+                "local",
+                "-f",
+                "send",
+                "--data",
+                "{}"
+            ]
+        ```
+- Add breakpoint and start debugging
 
